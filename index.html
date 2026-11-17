@@ -1,1003 +1,1364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#090d16">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B. K. Hariprasath — Full-Stack &amp; MERN Developer</title>
+  <meta name="description" content="Full-Stack &amp; MERN Developer with 3 years of experience building live web apps." />
 
-    <!-- SEO Meta Tags -->
-    <title>B. K. Hariprasath — Full-Stack &amp; MERN Developer</title>
-    <meta name="title" content="B. K. Hariprasath — Full-Stack &amp; MERN Developer">
-    <meta name="description" content="Portfolio of B. K. Hariprasath, a Full-Stack &amp; MERN Developer with 3 years of experience shipping live web applications, clean APIs, and responsive interfaces at SmartXoft.">
+  <!-- Favicon -->
+  <link rel="icon" href="./img/favicon.png" type="image/png" />
 
-    <!-- Google Fonts: Poppins (Primary) & JetBrains Mono (Technical Accent) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Open Graph & Social SEO Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="B. K. Hariprasath — Full-Stack &amp; MERN Developer" />
+  <meta property="og:description" content="Full-Stack &amp; MERN Developer with 3 years of experience building live web apps." />
+  <meta property="og:image" content="./img/prasath.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
 
-    <!-- Unicons CSS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <!-- Preload hero portrait -->
+  <link rel="preload" as="image" href="./img/prasath.jpeg" />
 
-    <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./premium.css">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body class="motion-theme">
-    <!-- Top Scroll Progress Bar -->
-    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+<body>
 
-    <!-- Custom Glowing Interactive Cursor -->
-    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
-    <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <!-- Interactive Custom Cursor -->
+  <div class="cursor-follower" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
 
-    <!-- Ambient Glowing Background Elements -->
-    <div class="ambient-glow-wrapper" aria-hidden="true">
-        <div class="ambient-mesh"></div>
-        <div class="ambient-orb ambient-orb-1"></div>
-        <div class="ambient-orb ambient-orb-2"></div>
-        <div class="ambient-orb ambient-orb-3"></div>
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Clean Brand Identity (without distracting dots) -->
+      <a href="#top" class="brand-badge" aria-label="Hariprasath — Full-Stack Developer">
+        <span class="brand-name">Hariprasath</span>
+        <span class="brand-role">Full-Stack &amp; MERN Dev</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-center-menu" aria-label="Primary Navigation">
+        <a href="#top" class="nav-link active">Overview</a>
+        <a href="#resume" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Get in Touch</a>
+      </nav>
+
+      <!-- Right Nav Actions -->
+      <div class="nav-actions">
+        <!-- Live India / Coimbatore Local Time -->
+        <div class="nav-status-widget" title="Live Local Time in Coimbatore, India (IST)">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>COIMBATORE</span>
+          <span id="indiaTime" style="font-weight: 700; color: var(--text-main);">--:--:--</span>
+        </div>
+
+        <!-- Download CV Header Button -->
+        <a href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf" class="cv-pill-btn" aria-label="Download Hariprasath's CV">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>CV</span>
+        </a>
+
+        <!-- Theme Toggle (Dark / Light) -->
+        <button type="button" class="theme-btn" id="themeToggleBtn" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <svg class="theme-icon-light" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+          <svg class="theme-icon-dark" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
 
-    <!-- Main Container -->
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-list">
+        <li><a href="#top" class="mobile-nav-link">Overview</a></li>
+        <li><a href="#resume" class="mobile-nav-link">Experience &amp; Background</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Featured Work (34 Sites)</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Get in Touch</a></li>
+        <li style="padding-top: 0.5rem;">
+          <a href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf" class="cv-pill-btn" style="width: 100%; justify-content: center;">
+            <span>Download Official Resume (PDF)</span>
+          </a>
+        </li>
+      </ul>
+      <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-light); font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-subtle);">
+        Available for full-time engineering roles &amp; freelance projects
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION (#top)
+         ========================================== -->
+    <section id="top" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left: Hero Portrait with Architectural Corner Crosshairs -->
+          <div class="hero-portrait-wrapper">
+            <div class="portrait-frame">
+              <span class="corner-crosshair corner-tl" aria-hidden="true"></span>
+              <span class="corner-crosshair corner-tr" aria-hidden="true"></span>
+              <span class="corner-crosshair corner-bl" aria-hidden="true"></span>
+              <span class="corner-crosshair corner-br" aria-hidden="true"></span>
+
+              <div class="portrait-img-wrap">
+                <img 
+                  src="./img/prasath.jpeg" 
+                  alt="Portrait of B. K. Hariprasath — Full-Stack Developer" 
+                  width="480" 
+                  height="480" 
+                  class="portrait-img" 
+                />
+              </div>
+            </div>
+            <p class="portrait-caption">
+              <span>B. K. Hariprasath — Full-Stack Developer, Coimbatore</span>
+            </p>
+          </div>
+
+          <!-- Right: Hero Content (Only ONE <h1> on the entire page) -->
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span>MERN STACK &amp; GSAP MOTION · 3+ YEARS AT SMARTXOFT</span>
+            </div>
+            
+            <h1 class="hero-title">Hello, I’m Hariprasath</h1>
+            <h2 class="hero-subtitle">Writing code with real people in mind.</h2>
+            
+            <p class="hero-bio">
+              I build web apps and websites that load fast, feel natural to use, and don't break in production. Over the last 3 years, I’ve delivered <strong>20+ projects at SmartXoft, and 34 sites in total including freelance work</strong> — handling responsive frontends in React, RESTful APIs in Node.js, database architecture, and live cloud deployments.
+            </p>
+
+            <!-- Interactive Action Spheres -->
+            <div class="hero-actions-group">
+              <a href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf" class="hero-sphere-cta sphere-resume" aria-label="Download Official Resume">
+                <span>Resume</span>
+                <span class="sphere-sub">Download CV</span>
+              </a>
+              <a href="#projects" class="hero-sphere-cta sphere-projects" aria-label="Jump to Projects section">
+                <span>Work</span>
+                <span class="sphere-sub">34 Sites Shipped</span>
+              </a>
+              <a href="#contact" class="hero-sphere-cta sphere-contact" aria-label="Jump to Contact section">
+                <span>Let's talk</span>
+                <span class="sphere-sub">Say Hello</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Consistent Numerical Stats Strip -->
+        <div class="hero-stats-strip">
+          <div class="stat-item">
+            <div class="stat-num" data-target="3" data-prefix="" data-suffix="+">3<span>+</span></div>
+            <div class="stat-label">Years of Hands-on Work</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="20" data-prefix="" data-suffix="+">20<span>+</span></div>
+            <div class="stat-label">SmartXoft Client Builds (34 Total)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="70" data-prefix="" data-suffix="%">70<span>%</span></div>
+            <div class="stat-label">Faster Render &amp; Load Times</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="85" data-prefix="" data-suffix="+">85<span>+</span></div>
+            <div class="stat-label">Google Lighthouse Score</div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             COMPLETE 34 CLIENT WEBSITES DIRECTORY
+             ========================================== -->
+        <div class="client-directory-section" id="all-client-work">
+          <div class="client-directory-header">
+            <div>
+              <span class="mono-tag">Verified Portfolio</span>
+              <h3 class="client-directory-title">34 Live Client Websites &amp; Platforms</h3>
+              <p class="client-directory-subtitle">
+                Every live commercial website, platform, and frontend build delivered for 34 businesses across retail, healthcare, industrial, food, and corporate sectors.
+              </p>
+            </div>
+            <div>
+              <span id="clientCountBadge" class="mono-tag" style="background: var(--bg-secondary); padding: 0.4rem 0.85rem; border-radius: var(--radius-full); border: 1px solid var(--border-light);">34 of 34 Projects</span>
+            </div>
+          </div>
+
+          <!-- Real-Time Search & Category Filter Controls -->
+          <div class="client-search-filter-bar">
+            <div class="client-search-input-wrap">
+              <svg class="client-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="clientSearchInput" class="client-search-input" placeholder="Search 34 websites by name (e.g. Elevators, Ghee, Hospital, Foods)..." aria-label="Search client websites" />
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="filter-btn active" data-client-filter="all">All (34)</button>
+              <button type="button" class="filter-btn" data-client-filter="Client website">Client Websites (30)</button>
+              <button type="button" class="filter-btn" data-client-filter="Frontend">Frontend Builds</button>
+              <button type="button" class="filter-btn" data-client-filter="Delivery app">Delivery Apps</button>
+            </div>
+          </div>
+
+          <!-- 34 Live Verified Projects Grid with Direct Clickable Links -->
+          <div class="client-directory-grid" id="clientDirectoryGrid">
+          <!-- Aristocratic Elevators -->
+          <a href="http://aristocraticelevators.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Aristocratic Elevators" data-type="Client website" aria-label="Visit Aristocratic Elevators (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">01</span>
+              <span class="client-card-name">Aristocratic Elevators</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Ajandhaa Foods -->
+          <a href="https://www.ajandhaafoods.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Ajandhaa Foods" data-type="Client website" aria-label="Visit Ajandhaa Foods (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">02</span>
+              <span class="client-card-name">Ajandhaa Foods</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Anneo Biotech -->
+          <a href="https://anneobiotech.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Anneo Biotech" data-type="Client website" aria-label="Visit Anneo Biotech (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">03</span>
+              <span class="client-card-name">Anneo Biotech</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Dosil -->
+          <a href="https://dosil.in" target="_blank" rel="noreferrer" class="client-card-link" data-name="Dosil" data-type="Client website" aria-label="Visit Dosil (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">04</span>
+              <span class="client-card-name">Dosil</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Edge Studios -->
+          <a href="https://edgestudios.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Edge Studios" data-type="Client website" aria-label="Visit Edge Studios (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">05</span>
+              <span class="client-card-name">Edge Studios</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Kadal Kitchen -->
+          <a href="https://kadalkitchen.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Kadal Kitchen" data-type="Frontend" aria-label="Visit Kadal Kitchen (Frontend), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">06</span>
+              <span class="client-card-name">Kadal Kitchen</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Frontend</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Sri Chemicals -->
+          <a href="http://srichemicals.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Sri Chemicals" data-type="Client website" aria-label="Visit Sri Chemicals (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">07</span>
+              <span class="client-card-name">Sri Chemicals</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Ganesh Ceramic -->
+          <a href="https://ganeshceramic.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Ganesh Ceramic" data-type="Client website" aria-label="Visit Ganesh Ceramic (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">08</span>
+              <span class="client-card-name">Ganesh Ceramic</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Marine Trans -->
+          <a href="https://www.marinetrans.net.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Marine Trans" data-type="Client website" aria-label="Visit Marine Trans (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">09</span>
+              <span class="client-card-name">Marine Trans</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Harsha Eastern -->
+          <a href="http://harshaeastern.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Harsha Eastern" data-type="Client website" aria-label="Visit Harsha Eastern (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">10</span>
+              <span class="client-card-name">Harsha Eastern</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- SA Marine -->
+          <a href="http://sammarine.co.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="SA Marine" data-type="Client website" aria-label="Visit SA Marine (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">11</span>
+              <span class="client-card-name">SA Marine</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Salz & Halz -->
+          <a href="https://salzandhalz.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Salz & Halz" data-type="Client website" aria-label="Visit Salz & Halz (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">12</span>
+              <span class="client-card-name">Salz & Halz</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Hireona India -->
+          <a href="https://hireonaindia.com/frontend" target="_blank" rel="noreferrer" class="client-card-link" data-name="Hireona India" data-type="Frontend" aria-label="Visit Hireona India (Frontend), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">13</span>
+              <span class="client-card-name">Hireona India</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Frontend</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Image Icon -->
+          <a href="https://imageicon.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Image Icon" data-type="Client website" aria-label="Visit Image Icon (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">14</span>
+              <span class="client-card-name">Image Icon</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- iTech Steri -->
+          <a href="https://itechsteri.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="iTech Steri" data-type="Client website" aria-label="Visit iTech Steri (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">15</span>
+              <span class="client-card-name">iTech Steri</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- StrainSyn -->
+          <a href="https://strainsyn.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="StrainSyn" data-type="Client website" aria-label="Visit StrainSyn (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">16</span>
+              <span class="client-card-name">StrainSyn</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Power Express -->
+          <a href="https://powerexpress.com.sg/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Power Express" data-type="Client website" aria-label="Visit Power Express (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">17</span>
+              <span class="client-card-name">Power Express</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- QuickBasket -->
+          <a href="https://quickbasket.sitedemo.pro/" target="_blank" rel="noreferrer" class="client-card-link" data-name="QuickBasket" data-type="Delivery app" aria-label="Visit QuickBasket (Delivery app), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">18</span>
+              <span class="client-card-name">QuickBasket</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Delivery app</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Rexcellynk -->
+          <a href="https://www.rexcellynk.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Rexcellynk" data-type="Client website" aria-label="Visit Rexcellynk (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">19</span>
+              <span class="client-card-name">Rexcellynk</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- RKVSS -->
+          <a href="https://rkvss.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="RKVSS" data-type="Client website" aria-label="Visit RKVSS (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">20</span>
+              <span class="client-card-name">RKVSS</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- RKG Ghee -->
+          <a href="https://www.rkgghee.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="RKG Ghee" data-type="Client website" aria-label="Visit RKG Ghee (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">21</span>
+              <span class="client-card-name">RKG Ghee</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Senthil Hospital -->
+          <a href="http://senthilhospital.live/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Senthil Hospital" data-type="Client website" aria-label="Visit Senthil Hospital (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">22</span>
+              <span class="client-card-name">Senthil Hospital</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- SmartXoft -->
+          <a href="http://smartxoft.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="SmartXoft" data-type="Client website" aria-label="Visit SmartXoft (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">23</span>
+              <span class="client-card-name">SmartXoft</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- SVAIR System -->
+          <a href="http://svairsystem.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="SVAIR System" data-type="Client website" aria-label="Visit SVAIR System (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">24</span>
+              <span class="client-card-name">SVAIR System</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Vimmies -->
+          <a href="http://vimmies.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Vimmies" data-type="Client website" aria-label="Visit Vimmies (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">25</span>
+              <span class="client-card-name">Vimmies</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Nadia Pharmacy -->
+          <a href="http://nadiapharmacy.com.my/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Nadia Pharmacy" data-type="Client website" aria-label="Visit Nadia Pharmacy (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">26</span>
+              <span class="client-card-name">Nadia Pharmacy</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- MyTopTouch -->
+          <a href="https://www.mytoptouch.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="MyTopTouch" data-type="Client website" aria-label="Visit MyTopTouch (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">27</span>
+              <span class="client-card-name">MyTopTouch</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Global Forms Engineering -->
+          <a href="http://globalformsengineering.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Global Forms Engineering" data-type="Client website" aria-label="Visit Global Forms Engineering (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">28</span>
+              <span class="client-card-name">Global Forms Engineering</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Al Mahaliyah -->
+          <a href="https://almahaliyah.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Al Mahaliyah" data-type="Client website" aria-label="Visit Al Mahaliyah (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">29</span>
+              <span class="client-card-name">Al Mahaliyah</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- M2 Thirumanamalai -->
+          <a href="http://m2thirumanamalai.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="M2 Thirumanamalai" data-type="Client website" aria-label="Visit M2 Thirumanamalai (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">30</span>
+              <span class="client-card-name">M2 Thirumanamalai</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Sublime Structures -->
+          <a href="https://sublimestructures.com/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Sublime Structures" data-type="Client website" aria-label="Visit Sublime Structures (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">31</span>
+              <span class="client-card-name">Sublime Structures</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Thamaya -->
+          <a href="http://thamaya.in/" target="_blank" rel="noreferrer" class="client-card-link" data-name="Thamaya" data-type="Client website" aria-label="Visit Thamaya (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">32</span>
+              <span class="client-card-name">Thamaya</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Bharatmart -->
+          <a href="https://bharatmart.co.ao/frontend" target="_blank" rel="noreferrer" class="client-card-link" data-name="Bharatmart" data-type="Frontend" aria-label="Visit Bharatmart (Frontend), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">33</span>
+              <span class="client-card-name">Bharatmart</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Frontend</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          <!-- Lajix -->
+          <a href="https://lajix.com/newwin" target="_blank" rel="noreferrer" class="client-card-link" data-name="Lajix" data-type="Client website" aria-label="Visit Lajix (Client website), opens in a new tab">
+            <div class="client-card-left">
+              <span class="client-card-index">34</span>
+              <span class="client-card-name">Lajix</span>
+            </div>
+            <div class="client-card-right">
+              <span class="client-card-type">Client website</span>
+              <span class="client-card-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+          </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EXPERIENCE & BACKGROUND (#resume)
+         ========================================== -->
+    <section id="resume" class="resume-section">
+      <div class="container">
+        
+        <!-- Section Header (Uses <h2>) -->
+        <div class="section-head">
+          <span class="mono-tag">Experience</span>
+          <h2 class="section-title">How I got here and what I've shipped</h2>
+          <p class="section-desc">
+            Before jumping into web development, I graduated with a B.Sc. in Psychology. That background shapes how I write code: I always design and build with the person on the other side of the screen in mind.
+          </p>
+        </div>
+
+        <!-- Work History Block -->
+        <div class="resume-block-grid">
+          <div class="resume-block-sidebar">
+            <span class="mono-tag">Work History</span>
+            <h3>Where I’ve worked</h3>
+            <p>From an eager intern to handling client deliveries from kickoff through to live cloud deployment.</p>
+            <div style="margin-top: 1.5rem;">
+              <a href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf" class="cv-pill-btn">
+                <span>Download Full CV (PDF)</span> &darr;
+              </a>
+            </div>
+          </div>
+
+          <div class="experience-list">
+            
+            <!-- Job 1 -->
+            <article class="experience-card">
+              <div class="exp-header">
+                <span class="exp-period">2023 — Present · Full-Time</span>
+                <div class="exp-company">SmartXoft · Coimbatore, Tamil Nadu, India</div>
+              </div>
+              <h4 class="exp-title">Full Stack Developer (MERN Stack)</h4>
+              <p class="exp-desc">
+                Promoted to Full Stack Developer within eight months after owning client builds and shipping on time. Responsible for client delivery, feature development, RESTful APIs, and cloud hosting across healthcare, retail, industrial, and food businesses.
+              </p>
+              <div class="exp-highlights">
+                <span class="exp-badge">20+ Projects at SmartXoft (34 Total)</span>
+                <span class="exp-badge">React &amp; Node.js Full-Stack</span>
+                <span class="exp-badge">70% Faster Loading Optimization</span>
+                <span class="exp-badge">Built a user-generated content feature that scored 85+ on Google Lighthouse performance.</span>
+                <span class="exp-badge">Memrise Feature Collaboration</span>
+                <span class="exp-badge">RESTful APIs &amp; GSAP Micro-Interactions</span>
+                <span class="exp-badge">AWS EC2 &amp; Linux VPS Deployments</span>
+                <span class="exp-badge">SSL/TLS &amp; DNS Setup</span>
+              </div>
+            </article>
+
+            <!-- Job 2 -->
+            <article class="experience-card">
+              <div class="exp-header">
+                <span class="exp-period">2023 (8 Months) · Internship</span>
+                <div class="exp-company">SmartXoft · Coimbatore</div>
+              </div>
+              <h4 class="exp-title">Full Stack Developer Intern</h4>
+              <p class="exp-desc">
+                Took ownership of client web builds and converted wireframes into responsive, cross-browser interfaces. Integrated backend endpoints, helped structure data models in MongoDB &amp; Mongoose and MySQL, and collaborated via Git code reviews.
+              </p>
+              <div class="exp-highlights">
+                <span class="exp-badge">Promoted to Full-Time in 8 Months</span>
+                <span class="exp-badge">MERN Stack Foundations</span>
+                <span class="exp-badge">Git &amp; Branching Conventions</span>
+                <span class="exp-badge">Responsive Component Libraries</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Education Block -->
+        <div class="resume-block-grid">
+          <div class="resume-block-sidebar">
+            <span class="mono-tag">Education &amp; Training</span>
+            <h3>Where I studied</h3>
+            <p>Psychology foundation, technical training, and hands-on developer certifications.</p>
+          </div>
+
+          <div class="education-list">
+            
+            <!-- Degree 1 -->
+            <div class="education-card">
+              <span class="edu-year">2017 — 2020</span>
+              <h4 class="edu-degree">Bachelor of Science · Psychology</h4>
+              <p class="edu-school">Sree Saraswathi Thyagaraja College</p>
+              <p class="edu-thesis">
+                <strong>Focus:</strong> Human cognition, behavioral psychology, and decision-making — which directly informs how I engineer intuitive software, structure information, and eliminate user friction.
+              </p>
+            </div>
+
+            <!-- Degree 2 -->
+            <div class="education-card">
+              <span class="edu-year">2023 — 2024</span>
+              <h4 class="edu-degree">Web Design &amp; Web Development</h4>
+              <p class="edu-school">Web D School</p>
+              <p class="edu-thesis">
+                <strong>Focus:</strong> Comprehensive full-stack training in modern frontend and backend development, responsive UI design, JavaScript ES6+, and web performance.
+              </p>
+            </div>
+
+            <!-- Credential 1 -->
+            <div class="education-card">
+              <span class="edu-year">Certified Professional</span>
+              <h4 class="edu-degree">Certified Full Stack Development</h4>
+              <p class="edu-school">MERN Stack Architecture</p>
+              <p class="edu-thesis">
+                Practical certification covering React component lifecycles, Express.js RESTful API design, Express middleware, MongoDB &amp; Mongoose, and cloud deployment.
+              </p>
+            </div>
+
+            <!-- Credential 2 -->
+            <div class="education-card">
+              <span class="edu-year">Certified Professional</span>
+              <h4 class="edu-degree">Adobe Photoshop CC Certified</h4>
+              <p class="edu-school">Visual Asset Optimization</p>
+              <p class="edu-thesis">
+                Hands-on training in layout mockups, image compression pipelines, SVG asset manipulation, and preparing lightweight visuals for maximum web performance.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Skills Block -->
+        <div class="resume-block-grid">
+          <div class="resume-block-sidebar">
+            <span class="mono-tag">Technical Skills</span>
+            <h3>What I bring to the table</h3>
+            <p>Tools and practices I rely on daily to ship fast, dependable, and maintainable software.</p>
+            
+            <div style="margin-top: 1.5rem;">
+              <p class="mono-tag">Languages I Speak</p>
+              <div class="tech-tag-group">
+                <span class="tech-tag">English</span>
+                <span class="tech-tag">Tamil</span>
+                <span class="tech-tag">Kannada</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="skills-grid">
+              
+              <!-- Skill 1: Frontend -->
+              <div class="skill-card">
+                <div class="skill-info">
+                  <span class="skill-name">React.js &amp; Modern UI</span>
+                  <span class="skill-pct">94%</span>
+                </div>
+                <div class="skill-bar-outer">
+                  <div class="skill-bar-inner" data-skill-level="94%"></div>
+                </div>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">React Hooks</span>
+                  <span class="tech-tag">Redux / Context API</span>
+                  <span class="tech-tag">JavaScript ES6+</span>
+                  <span class="tech-tag">AJAX &amp; Fetch API</span>
+                </div>
+              </div>
+
+              <!-- Skill 2: Backend -->
+              <div class="skill-card">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js &amp; Express.js RESTful APIs</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-outer">
+                  <div class="skill-bar-inner" data-skill-level="90%"></div>
+                </div>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">RESTful APIs</span>
+                  <span class="tech-tag">Express middleware</span>
+                  <span class="tech-tag">JWT Authentication</span>
+                  <span class="tech-tag">Swagger / OpenAPI</span>
+                </div>
+              </div>
+
+              <!-- Skill 3: Databases (MongoDB First for MERN) -->
+              <div class="skill-card">
+                <div class="skill-info">
+                  <span class="skill-name">MongoDB &amp; Mongoose / MySQL</span>
+                  <span class="skill-pct">88%</span>
+                </div>
+                <div class="skill-bar-outer">
+                  <div class="skill-bar-inner" data-skill-level="88%"></div>
+                </div>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">MongoDB &amp; Mongoose</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Query Optimization</span>
+                  <span class="tech-tag">Data Modeling</span>
+                </div>
+              </div>
+
+              <!-- Skill 4: Motion -->
+              <div class="skill-card">
+                <div class="skill-info">
+                  <span class="skill-name">GSAP Motion &amp; Interactive Web</span>
+                  <span class="skill-pct">92%</span>
+                </div>
+                <div class="skill-bar-outer">
+                  <div class="skill-bar-inner" data-skill-level="92%"></div>
+                </div>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">ScrollTrigger</span>
+                  <span class="tech-tag">Micro-Interactions</span>
+                  <span class="tech-tag">60 FPS Animations</span>
+                </div>
+              </div>
+
+              <!-- Skill 5: Cloud & DevOps -->
+              <div class="skill-card">
+                <div class="skill-info">
+                  <span class="skill-name">AWS, Linux VPS &amp; Deployments</span>
+                  <span class="skill-pct">86%</span>
+                </div>
+                <div class="skill-bar-outer">
+                  <div class="skill-bar-inner" data-skill-level="86%"></div>
+                </div>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">AWS EC2</span>
+                  <span class="tech-tag">CloudFront</span>
+                  <span class="tech-tag">Linux VPS</span>
+                  <span class="tech-tag">SSL/TLS &amp; DNS</span>
+                </div>
+              </div>
+
+              <!-- Skill 6: Optimization -->
+              <div class="skill-card">
+                <div class="skill-info">
+                  <span class="skill-name">Web Performance &amp; Optimization</span>
+                  <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-outer">
+                  <div class="skill-bar-inner" data-skill-level="90%"></div>
+                </div>
+                <div class="tech-tag-group">
+                  <span class="tech-tag">85+ Lighthouse</span>
+                  <span class="tech-tag">Batch Processing</span>
+                  <span class="tech-tag">State Caching</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Complete Stack Pills -->
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--radius-md);">
+              <p class="mono-tag">Daily Toolkit &amp; Environment</p>
+              <div class="client-brands-row" style="margin-top: 0.85rem;">
+                <span class="client-brand-chip">React.js</span>
+                <span class="client-brand-chip">Node.js</span>
+                <span class="client-brand-chip">Express.js</span>
+                <span class="client-brand-chip">Express middleware</span>
+                <span class="client-brand-chip">MongoDB &amp; Mongoose</span>
+                <span class="client-brand-chip">MySQL</span>
+                <span class="client-brand-chip">PHP &amp; Laravel</span>
+                <span class="client-brand-chip">Redux / Context API</span>
+                <span class="client-brand-chip">JavaScript ES6+</span>
+                <span class="client-brand-chip">HTML5 &amp; Modern CSS3</span>
+                <span class="client-brand-chip">Bootstrap</span>
+                <span class="client-brand-chip">jQuery</span>
+                <span class="client-brand-chip">GSAP</span>
+                <span class="client-brand-chip">AWS EC2</span>
+                <span class="client-brand-chip">Linux VPS</span>
+                <span class="client-brand-chip">Git &amp; GitHub</span>
+                <span class="client-brand-chip">Postman</span>
+                <span class="client-brand-chip">Figma</span>
+                <span class="client-brand-chip">Adobe Photoshop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SELECTED PROJECTS (#projects)
+         ========================================== -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        
+        <!-- Section Header (Uses <h2>) -->
+        <div class="section-head">
+          <span class="mono-tag">Selected Work</span>
+          <h2 class="section-title">Real projects built for real businesses</h2>
+          <p class="section-desc">
+            A selection of live web applications, SaaS tools, and client platforms I helped build and ship — highlighting 20+ projects delivered at SmartXoft and 34 sites in total including freelance work.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="projects-filter-bar">
+          <button type="button" class="filter-btn active" data-filter="all">All Work (34 Sites)</button>
+          <button type="button" class="filter-btn" data-filter="saas">SaaS &amp; Management</button>
+          <button type="button" class="filter-btn" data-filter="delivery">Delivery &amp; Logistics</button>
+          <button type="button" class="filter-btn" data-filter="ecommerce">Full-Stack MERN</button>
+          <button type="button" class="filter-btn" data-filter="client">Commercial Storefronts</button>
+        </div>
+
+        <!-- Projects Stack -->
+        <div class="projects-stack">
+          
+          <!-- Project 1: Stylx Multi-Vendor SaaS -->
+          <article class="project-card" data-category="saas">
+            <div class="project-media-wrapper">
+              <span class="project-overlay-badge">Salon SaaS Platform</span>
+              <img 
+                src="./img/business.png" 
+                alt="Stylx Multi-Vendor Salon Management SaaS Interface" 
+                loading="lazy" 
+                class="project-img" 
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-code">2024 · SaaS Platform</span>
+                <span class="project-year">SmartXoft</span>
+              </div>
+              <h3 class="project-title">Stylx · Multi-Vendor Salon Management SaaS</h3>
+              <p class="project-desc">
+                Contributed to building a multi-vendor salon operations platform with vendor sign-in flows, appointment booking calendars, and day-to-day salon management tools.
+              </p>
+              
+              <div class="project-specs-grid">
+                <div>
+                  <div class="spec-cell-label">Role</div>
+                  <div class="spec-cell-val">Full-Stack Developer</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Stack</div>
+                  <div class="spec-cell-val">React · Node.js · Express.js · MySQL</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Year</div>
+                  <div class="spec-cell-val">2024</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Key Capability</div>
+                  <div class="spec-cell-val spec-outcome">Multi-vendor authentication with role-based access control (RBAC)</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="project-cta-btn" data-case-trigger="p1">
+                  <span>Explore Case Study</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02: QuickBasket Delivery Commerce -->
+          <article class="project-card" data-category="delivery">
+            <div class="project-media-wrapper">
+              <span class="project-overlay-badge">Zone Delivery Commerce</span>
+              <img 
+                src="./img/realestate.png" 
+                alt="QuickBasket Delivery Commerce Interface" 
+                loading="lazy" 
+                class="project-img" 
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-code">2023 · Delivery App</span>
+                <span class="project-year">Live Production Demo</span>
+              </div>
+              <h3 class="project-title">QuickBasket · Zone-Based Delivery Commerce</h3>
+              <p class="project-desc">
+                Built desktop and mobile interfaces for zone-aware product browsing and ordering, with delivery workflows connected to Node.js RESTful APIs and MySQL.
+              </p>
+              
+              <div class="project-specs-grid">
+                <div>
+                  <div class="spec-cell-label">Role</div>
+                  <div class="spec-cell-val">Frontend &amp; API Integration</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Stack</div>
+                  <div class="spec-cell-val">React · Express.js · MySQL</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Live Demo</div>
+                  <div class="spec-cell-val spec-outcome">quickbasket.sitedemo.pro</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Architecture</div>
+                  <div class="spec-cell-val">Geofenced Product Discovery</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="project-cta-btn" data-case-trigger="p2">
+                  <span>Explore Case Study</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <a href="https://quickbasket.sitedemo.pro/" target="_blank" rel="noreferrer" class="client-brand-chip">
+                  <span>Visit Live Demo</span> ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03: Full-Stack MERN E-Commerce -->
+          <article class="project-card" data-category="ecommerce">
+            <div class="project-media-wrapper">
+              <span class="project-overlay-badge">Full-Stack MERN Platform</span>
+              <img 
+                src="./img/ecommerce-website.png" 
+                alt="Full-Stack React E-Commerce Application Interface" 
+                loading="lazy" 
+                class="project-img" 
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-code">2023 · MERN Stack</span>
+                <span class="project-year">Full-Stack Commerce</span>
+              </div>
+              <h3 class="project-title">Full-Stack React E-Commerce Application</h3>
+              <p class="project-desc">
+                Developed product discovery, instant debounced search, cart state management, checkout, and payment gateway functionality with a responsive layout across mobile and desktop.
+              </p>
+              
+              <div class="project-specs-grid">
+                <div>
+                  <div class="spec-cell-label">Role</div>
+                  <div class="spec-cell-val">Full-Stack MERN Developer</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Stack</div>
+                  <div class="spec-cell-val">React · Node.js · Express.js · MongoDB &amp; Mongoose</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Year</div>
+                  <div class="spec-cell-val">2023</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Highlights</div>
+                  <div class="spec-cell-val spec-outcome">Instant Filters &amp; Responsive Cart</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="project-cta-btn" data-case-trigger="p3">
+                  <span>Explore Case Study</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 04: Commercial Client Storefronts -->
+          <article class="project-card" data-category="client">
+            <div class="project-media-wrapper">
+              <span class="project-overlay-badge">Production Deployments</span>
+              <img 
+                src="./img/business-consult.png" 
+                alt="Commerce Storefronts for 34 Businesses" 
+                loading="lazy" 
+                class="project-img" 
+              />
+            </div>
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span class="project-code">2023 — Present</span>
+                <span class="project-year">Commercial Portfolio</span>
+              </div>
+              <h3 class="project-title">Commercial Storefronts Shipped for 34 Businesses</h3>
+              <p class="project-desc">
+                Built and contributed to responsive commerce and corporate websites using PHP, Laravel, React, and AWS, ensuring fast loading and clean presentation on phones and desktops.
+              </p>
+              
+              <!-- Direct Client Links -->
+              <div class="client-brands-row" style="margin-bottom: 1.5rem;">
+                <a href="https://almahaliyah.com/" target="_blank" rel="noreferrer" class="client-brand-chip">Al Mahaliyah ↗</a>
+                <a href="http://thamaya.in/" target="_blank" rel="noreferrer" class="client-brand-chip">Thamaya ↗</a>
+                <a href="https://bharatmart.co.ao/frontend" target="_blank" rel="noreferrer" class="client-brand-chip">Bharatmart ↗</a>
+                <a href="http://vimmies.in/" target="_blank" rel="noreferrer" class="client-brand-chip">Vimmies ↗</a>
+                <a href="https://salzandhalz.com/" target="_blank" rel="noreferrer" class="client-brand-chip">Salz &amp; Halz ↗</a>
+              </div>
+
+              <div class="project-specs-grid">
+                <div>
+                  <div class="spec-cell-label">Role</div>
+                  <div class="spec-cell-val">Full-Stack &amp; Web Developer</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Stack</div>
+                  <div class="spec-cell-val">PHP · Laravel · React · AWS</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Scale</div>
+                  <div class="spec-cell-val spec-outcome">34 Businesses Launched</div>
+                </div>
+                <div>
+                  <div class="spec-cell-label">Performance</div>
+                  <div class="spec-cell-val">85+ Google Lighthouse Score</div>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <button type="button" class="project-cta-btn" data-case-trigger="p4">
+                  <span>Explore Case Study</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT (#contact)
+         ========================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <!-- Section Header (Uses <h2>) -->
+        <div class="section-head">
+          <span class="mono-tag">Get in Touch</span>
+          <h2 class="section-title">Have a project in mind, or want to talk shop?</h2>
+          <p class="section-desc">
+            Whether you need a full-stack developer to help build a web app, have a freelance project in mind, or just want to chat — feel free to drop me a line. I usually reply within a few hours.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Left: Contact Form -->
+          <div class="contact-form-card">
+            <form id="contactForm">
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label for="formName" class="form-label">Your Name</label>
+                  <input type="text" id="formName" class="form-input" placeholder="e.g. Alex Sharma" required />
+                </div>
+                <div class="form-field">
+                  <label for="formEmail" class="form-label">Your Email</label>
+                  <input type="email" id="formEmail" class="form-input" placeholder="you@company.com" required />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="formMessage" class="form-label">Your Message</label>
+                <textarea id="formMessage" class="form-textarea" placeholder="Tell me a bit about what you're building, what you need help with, and your timeline." required></textarea>
+              </div>
+
+              <div class="form-footer-action">
+                <button type="submit" class="form-submit-sphere" aria-label="Send message to Hariprasath">
+                  Send
+                </button>
+                <p class="form-direct-notice">
+                  Send a note here and it'll open straight into your email with everything already filled out.
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Sidebar Information & Status -->
+          <aside class="contact-sidebar">
+            
+            <div class="sidebar-info-card">
+              <!-- Direct Email -->
+              <div class="info-item">
+                <div class="info-label">Direct Email</div>
+                <div class="info-val">
+                  <a href="mailto:prasathfullstackdeveloper@gmail.com" style="word-break: break-all; font-size: 0.95rem;">prasathfullstackdeveloper@gmail.com</a>
+                  <button type="button" class="copy-pill-btn" id="copyEmailBtn" title="Copy email address to clipboard">Copy</button>
+                </div>
+              </div>
+
+              <!-- Direct Phone & WhatsApp -->
+              <div class="info-item">
+                <div class="info-label">Phone &amp; WhatsApp</div>
+                <div class="info-val">
+                  <a href="tel:+918056564031">+91 80565 64031</a>
+                  <a href="https://wa.me/918056564031" target="_blank" rel="noreferrer" class="copy-pill-btn" style="text-decoration:none;">WhatsApp ↗</a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="info-item">
+                <div class="info-label">Location</div>
+                <div class="info-val">
+                  <span>Pollachi · Coimbatore, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <!-- Online Links -->
+              <div class="info-item" style="margin-top: 1.75rem;">
+                <div class="info-label">Find Me Online</div>
+                <div class="social-links-grid">
+                  <!-- GitHub -->
+                  <a href="https://github.com/prasath0405" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Hariprasath on GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+
+                  <!-- Email -->
+                  <a href="mailto:prasathfullstackdeveloper@gmail.com" class="social-icon-btn" aria-label="Send Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </a>
+
+                  <!-- WhatsApp Direct -->
+                  <a href="https://wa.me/918056564031" target="_blank" rel="noreferrer" class="social-icon-btn" aria-label="Message on WhatsApp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Download CV Card Button -->
+              <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px dashed var(--border-light);">
+                <a href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf" class="cv-pill-btn" style="width: 100%; justify-content: center;">
+                  <span>Download Full Resume (PDF)</span> &darr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Availability Status Banner -->
+            <div class="availability-banner">
+              <div class="avail-header">
+                <span class="avail-pulse" aria-hidden="true"></span>
+                <span>Currently Available</span>
+              </div>
+              <p class="avail-desc">
+                Open to full-stack MERN opportunities, client builds, and full-time software engineering roles.
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       CASE STUDY DETAIL MODAL
+       ========================================== -->
+  <div class="case-modal-backdrop" id="caseModalBackdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="case-modal-container">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal dialog">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modalDynamicContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Toast Notification -->
+  <div class="toast-msg" id="toastMsg" role="alert">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastText">Message notification</span>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer">
     <div class="container">
-
-        <!-- --------------- HEADER / NAVIGATION --------------- -->
-        <header>
-            <nav id="header">
-                <div class="nav-logo">
-                    <a href="#home" class="logo-link" aria-label="Hariprasath Homepage">
-                        <span class="logo-badge">BK</span>
-                        <div class="logo-text">
-                            <span class="nav-name">Hariprasath<span class="accent-dot">.</span></span>
-                            <span class="nav-sub">Full Stack Developer</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="nav-menu" id="myNavMenu">
-                    <ul class="nav_menu_list">
-                        <li class="nav_list">
-                            <a href="#home" class="nav-link active-link">Home</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#stats" class="nav-link">Stats</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#about" class="nav-link">About</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#experience" class="nav-link">Experience</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#projects" class="nav-link">Projects</a>
-                            <div class="circle"></div>
-                        </li>
-                        <li class="nav_list">
-                            <a href="#contact" class="nav-link">Contact</a>
-                            <div class="circle"></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="nav-actions">
-                    <div class="social_icons nav-socials">
-                        <a class="icon magnetic-item" href="https://github.com/prasath0405" target="_blank" rel="noreferrer" aria-label="GitHub Profile">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                        <a class="icon magnetic-item" href="mailto:prasathfullstackdeveloper@gmail.com" aria-label="Direct Email">
-                            <i class="uil uil-envelope"></i>
-                        </a>
-                    </div>
-
-                    <div class="nav-button">
-                        <a class="btn primary-btn magnetic-btn" href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf">
-                            <span>Resume</span>
-                            <i class="uil uil-arrow-down"></i>
-                        </a>
-                    </div>
-
-                    <button class="nav-menu-btn" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-                        <i class="uil uil-bars"></i>
-                    </button>
-                </div>
-            </nav>
-        </header>
-
-        <!-- -------------- MAIN CONTENT ---------------- -->
-        <main class="wrapper">
-
-            <!-- -------------- HERO / FEATURED BOX ---------------- -->
-            <section class="featured-box" id="home">
-                <div class="featured-text">
-                    <!-- Status Pill -->
-                    <div class="status-pill hero-fade">
-                        <span class="status-indicator"></span>
-                        <span class="status-text">Open to new projects &amp; full-time roles</span>
-                    </div>
-
-                    <!-- Main Intro Name -->
-                    <div class="featured-name hero-fade">
-                        <h1 class="hero-title">
-                            <span class="hero-greeting">Hello, I’m</span>
-                            <span class="hero-highlight">B. K. Hariprasath</span>
-                            <span class="hero-dot">.</span>
-                        </h1>
-                    </div>
-
-                    <!-- Role Badge / Subheading -->
-                    <div class="featured-text-card hero-fade">
-                        <span class="role-pill">Full Stack Developer</span>
-                        <span class="role-sep">•</span>
-                        <span class="role-pill">MERN Stack</span>
-                        <span class="role-sep">•</span>
-                        <span class="role-pill">GSAP Interactions</span>
-                    </div>
-
-                    <!-- Humanized Story Bio -->
-                    <div class="featured-text-info hero-fade">
-                        <p class="hero-lead">
-                            I build clean, responsive web apps and websites that load fast, feel intuitive, and don't break in production.
-                        </p>
-                        <p class="hero-desc">
-                            Over the last <strong>3 years at SmartXoft</strong>, I’ve worked on <strong>20+ live client projects</strong> — handling everything from responsive frontends in React and smooth GSAP animations, to Node.js REST APIs, database schemas, and live deployments on AWS.
-                        </p>
-                        <div class="location-badge">
-                            <i class="uil uil-map-pin-alt"></i>
-                            <span>Pollachi / Coimbatore · Tamil Nadu, India</span>
-                        </div>
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="featured-text-btn hero-fade">
-                        <a class="btn glow-btn magnetic-btn" href="#projects">
-                            <span>See my work</span>
-                            <i class="uil uil-arrow-down-right"></i>
-                        </a>
-                        <a class="btn glass-btn magnetic-btn" href="#contact">
-                            <span>Let’s talk</span>
-                            <i class="uil uil-comment-dots"></i>
-                        </a>
-                        <a class="btn subtle-btn magnetic-btn" href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf">
-                            <span>Download CV</span>
-                            <i class="uil uil-file-download-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Portrait & Floating Interactive Badges -->
-                <div class="featured-image">
-                    <div class="image-wrapper" id="portraitCard">
-                        <div class="image-glow"></div>
-                        <div class="image">
-                            <img src="./img/prasath.jpeg" alt="Portrait of Hariprasath - Full Stack Developer">
-                        </div>
-
-                        <!-- Floating Badges with GSAP Float Motion -->
-                        <div class="floating-badge badge-react" data-float-speed="1.3">
-                            <div class="badge-icon"><img src="./img/react.png" alt="React" onerror="this.src='./img/JS.png'"></div>
-                            <div class="badge-content">
-                                <span class="badge-title">React &amp; Modern UI</span>
-                                <span class="badge-sub">Responsive &amp; Smooth</span>
-                            </div>
-                        </div>
-
-                        <div class="floating-badge badge-node" data-float-speed="1.7">
-                            <div class="badge-icon"><img src="./img/node js.png" alt="Node.js"></div>
-                            <div class="badge-content">
-                                <span class="badge-title">Node &amp; Express</span>
-                                <span class="badge-sub">RESTful Web APIs</span>
-                            </div>
-                        </div>
-
-                        <div class="floating-badge badge-mongo" data-float-speed="1.5">
-                            <div class="badge-icon"><img src="./img/mangodb.png" alt="MongoDB"></div>
-                            <div class="badge-content">
-                                <span class="badge-title">MongoDB &amp; MySQL</span>
-                                <span class="badge-sub">Clean Data Schemas</span>
-                            </div>
-                        </div>
-
-                        <div class="floating-badge badge-experience" data-float-speed="1.9">
-                            <div class="badge-metric">3+</div>
-                            <div class="badge-content">
-                                <span class="badge-title">Years at SmartXoft</span>
-                                <span class="badge-sub">Shipping Client Code</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Scroll Indicator -->
-                <div class="scroll-icon-box">
-                    <a href="#stats" class="scroll-btn magnetic-item" aria-label="Scroll down to statistics">
-                        <div class="mouse-indicator">
-                            <div class="mouse-wheel"></div>
-                        </div>
-                        <span class="scroll-label">Scroll to explore</span>
-                    </a>
-                </div>
-            </section>
-
-
-            <!-- -------------- SCROLL-ANIMATED SECTION STATS ---------------- -->
-            <section class="career-stats-section" id="stats" aria-label="Career highlights and statistics">
-                <div class="section-badge-kicker">
-                    <span class="kicker-pulse"></span>
-                    <span class="kicker-text">A Few Numbers</span>
-                </div>
-                <h2 class="stats-headline">What I’ve done over the past 3 years.</h2>
-                <p class="stats-subtext">Real metrics from day-to-day work shipping client projects with the team at SmartXoft.</p>
-
-                <div class="career-stats-grid">
-                    <!-- Stat 1 -->
-                    <div class="career-stat-card" data-stat-target="3">
-                        <div class="stat-card-glow"></div>
-                        <div class="stat-icon-wrap"><i class="uil uil-hourglass-end"></i></div>
-                        <div class="stat-number-wrap">
-                            <strong class="stat-number" data-value="3" data-prefix="0" data-suffix="+">03<span>+</span></strong>
-                        </div>
-                        <div class="stat-meta">
-                            <h3 class="stat-title">Years of Hands-on Work</h3>
-                            <p class="stat-desc">Joined as an intern in 2023, earned a full-time role in 8 months, and building client software ever since.</p>
-                        </div>
-                        <div class="stat-progress-bar"><div class="stat-progress-fill" style="--target-width: 95%;"></div></div>
-                    </div>
-
-                    <!-- Stat 2 -->
-                    <div class="career-stat-card" data-stat-target="20">
-                        <div class="stat-card-glow"></div>
-                        <div class="stat-icon-wrap"><i class="uil uil-rocket"></i></div>
-                        <div class="stat-number-wrap">
-                            <strong class="stat-number" data-value="20" data-suffix="+">20<span>+</span></strong>
-                        </div>
-                        <div class="stat-meta">
-                            <h3 class="stat-title">Websites &amp; Apps Launched</h3>
-                            <p class="stat-desc">Delivered for clients across healthcare, retail, education, food, and manufacturing.</p>
-                        </div>
-                        <div class="stat-progress-bar"><div class="stat-progress-fill" style="--target-width: 90%;"></div></div>
-                    </div>
-
-                    <!-- Stat 3 -->
-                    <div class="career-stat-card" data-stat-target="70">
-                        <div class="stat-card-glow"></div>
-                        <div class="stat-icon-wrap"><i class="uil uil-tachometer-fast-alt"></i></div>
-                        <div class="stat-number-wrap">
-                            <strong class="stat-number" data-value="70" data-suffix="%">70<span>%</span></strong>
-                        </div>
-                        <div class="stat-meta">
-                            <h3 class="stat-title">Faster Load Times</h3>
-                            <p class="stat-desc">Reworked batch file processing and frontend state caching on a core feature to cut waiting time.</p>
-                        </div>
-                        <div class="stat-progress-bar"><div class="stat-progress-fill" style="--target-width: 70%;"></div></div>
-                    </div>
-
-                    <!-- Stat 4 -->
-                    <div class="career-stat-card" data-stat-target="85">
-                        <div class="stat-card-glow"></div>
-                        <div class="stat-icon-wrap"><i class="uil uil-award"></i></div>
-                        <div class="stat-number-wrap">
-                            <strong class="stat-number" data-value="85" data-suffix="+">85<span>+</span></strong>
-                        </div>
-                        <div class="stat-meta">
-                            <h3 class="stat-title">Lighthouse Performance</h3>
-                            <p class="stat-desc">Built content features that scored 85+ on Core Web Vitals, accessibility, and 60fps animations.</p>
-                        </div>
-                        <div class="stat-progress-bar"><div class="stat-progress-fill" style="--target-width: 85%;"></div></div>
-                    </div>
-
-                    <!-- Stat 5 -->
-                    <div class="career-stat-card" data-stat-target="99.9">
-                        <div class="stat-card-glow"></div>
-                        <div class="stat-icon-wrap"><i class="uil uil-cloud-check"></i></div>
-                        <div class="stat-number-wrap">
-                            <strong class="stat-number" data-value="99.9" data-suffix="%">99.9<span>%</span></strong>
-                        </div>
-                        <div class="stat-meta">
-                            <h3 class="stat-title">Uptime on Production</h3>
-                            <p class="stat-desc">Hosting and maintaining live applications on AWS EC2, CloudFront, Linux VPS, and Cloudflare SSL.</p>
-                        </div>
-                        <div class="stat-progress-bar"><div class="stat-progress-fill" style="--target-width: 99.9%;"></div></div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- -------------- INFINITE TECH MARQUEE ---------------- -->
-            <div class="tech-marquee-wrapper" aria-hidden="true">
-                <div class="marquee-track">
-                    <div class="marquee-item"><i class="uil uil-react"></i> React.js</div>
-                    <div class="marquee-item"><i class="uil uil-server"></i> Node.js</div>
-                    <div class="marquee-item"><i class="uil uil-arrow"></i> Express.js</div>
-                    <div class="marquee-item"><i class="uil uil-database"></i> MongoDB</div>
-                    <div class="marquee-item"><i class="uil uil-database-alt"></i> MySQL</div>
-                    <div class="marquee-item"><i class="uil uil-bolt"></i> GSAP Motion</div>
-                    <div class="marquee-item"><i class="uil uil-brackets-curly"></i> JavaScript ES6+</div>
-                    <div class="marquee-item"><i class="uil uil-window"></i> Next.js</div>
-                    <div class="marquee-item"><i class="uil uil-cloud-computing"></i> AWS EC2</div>
-                    <div class="marquee-item"><i class="uil uil-shield-check"></i> Cloudflare &amp; SSL</div>
-                    <div class="marquee-item"><i class="uil uil-code-branch"></i> Git &amp; GitHub</div>
-                    <div class="marquee-item"><i class="uil uil-exchange"></i> RESTful APIs</div>
-                    <div class="marquee-item"><i class="uil uil-browser"></i> PHP &amp; Laravel</div>
-                    <div class="marquee-item"><i class="uil uil-palette"></i> Figma to Code</div>
-
-                    <!-- Duplicate for infinite smooth loop -->
-                    <div class="marquee-item"><i class="uil uil-react"></i> React.js</div>
-                    <div class="marquee-item"><i class="uil uil-server"></i> Node.js</div>
-                    <div class="marquee-item"><i class="uil uil-arrow"></i> Express.js</div>
-                    <div class="marquee-item"><i class="uil uil-database"></i> MongoDB</div>
-                    <div class="marquee-item"><i class="uil uil-database-alt"></i> MySQL</div>
-                    <div class="marquee-item"><i class="uil uil-bolt"></i> GSAP Motion</div>
-                    <div class="marquee-item"><i class="uil uil-brackets-curly"></i> JavaScript ES6+</div>
-                    <div class="marquee-item"><i class="uil uil-window"></i> Next.js</div>
-                    <div class="marquee-item"><i class="uil uil-cloud-computing"></i> AWS EC2</div>
-                    <div class="marquee-item"><i class="uil uil-shield-check"></i> Cloudflare &amp; SSL</div>
-                    <div class="marquee-item"><i class="uil uil-code-branch"></i> Git &amp; GitHub</div>
-                    <div class="marquee-item"><i class="uil uil-exchange"></i> RESTful APIs</div>
-                    <div class="marquee-item"><i class="uil uil-browser"></i> PHP &amp; Laravel</div>
-                    <div class="marquee-item"><i class="uil uil-palette"></i> Figma to Code</div>
-                </div>
-            </div>
-
-
-            <!-- -------------- ABOUT SECTION ---------------- -->
-            <section class="about section" id="about">
-                <div class="top-header">
-                    <div class="section-badge-kicker">
-                        <span class="kicker-pulse"></span>
-                        <span class="kicker-text">About Me</span>
-                    </div>
-                    <h2>From studying psychology to<br><span class="gradient-text">building web applications.</span></h2>
-                </div>
-
-                <div class="about-grid">
-                    <!-- Left: Narrative Story -->
-                    <div class="about-info-card">
-                        <div class="about-card-glow"></div>
-                        <div class="about-story-header">
-                            <span class="story-tag">My Background</span>
-                            <h3>Writing code with real people in mind.</h3>
-                        </div>
-                        <div class="about-story-body">
-                            <p>
-                                Before getting into web development, I graduated with a <strong>B.Sc. in Psychology</strong>. That background gave me a different way of looking at code: I always care about the person on the other side of the screen.
-                            </p>
-                            <p>
-                                To me, good software isn't just about whether a server responds with 200 OK — it's about whether it feels intuitive, loads instantly, and doesn't make someone feel lost. If an interface is confusing or sluggish, the user doesn't care how clever the backend is.
-                            </p>
-                            <p>
-                                In 2023, I joined <strong>SmartXoft</strong> as an intern. Within eight months, I earned a full-time role and started handling real client delivery. Today, I work across the whole stack: writing modular components in React, crafting REST APIs in Node.js and Express, designing schemas in MongoDB and MySQL, and deploying everything safely to AWS and Linux VPS.
-                            </p>
-                            <p>
-                                When I'm not coding, I'm usually testing out new GSAP motion ideas, tweaking Lighthouse performance scores, or learning something new.
-                            </p>
-                        </div>
-
-                        <div class="about-personal-metrics">
-                            <div class="personal-metric">
-                                <span class="metric-val">3+</span>
-                                <span class="metric-label">Years Shipping</span>
-                            </div>
-                            <div class="personal-metric">
-                                <span class="metric-val">&lt; 12h</span>
-                                <span class="metric-label">Quick Replies</span>
-                            </div>
-                            <div class="personal-metric">
-                                <span class="metric-val">34+</span>
-                                <span class="metric-label">Client Projects</span>
-                            </div>
-                        </div>
-
-                        <div class="about-btn-wrap">
-                            <a class="btn primary-btn magnetic-btn" href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf">
-                                <span>Download Resume</span>
-                                <i class="uil uil-file-download-alt"></i>
-                            </a>
-                            <a class="btn glass-btn magnetic-btn" href="#contact">
-                                <span>Get in touch</span>
-                                <i class="uil uil-arrow-up-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Right: Technical Arsenal / Skill Matrix -->
-                    <div class="skills-matrix">
-                        <!-- Frontend -->
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <div class="skills-icon"><i class="uil uil-window-grid"></i></div>
-                                <div>
-                                    <h3>Frontend &amp; Motion</h3>
-                                    <span class="skills-sub">Responsive &amp; Interactive</span>
-                                </div>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-pill">React.js</span>
-                                <span class="skill-pill">JavaScript ES6+</span>
-                                <span class="skill-pill">GSAP Animations</span>
-                                <span class="skill-pill">HTML5 &amp; Modern CSS3</span>
-                                <span class="skill-pill">Bootstrap</span>
-                                <span class="skill-pill">jQuery</span>
-                                <span class="skill-pill">AJAX &amp; Fetch</span>
-                                <span class="skill-pill">Responsive Design</span>
-                            </div>
-                        </div>
-
-                        <!-- Backend -->
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <div class="skills-icon"><i class="uil uil-server-network"></i></div>
-                                <div>
-                                    <h3>Backend &amp; APIs</h3>
-                                    <span class="skills-sub">Reliable &amp; Well-Documented</span>
-                                </div>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-pill">Node.js</span>
-                                <span class="skill-pill">Express.js</span>
-                                <span class="skill-pill">REST APIs</span>
-                                <span class="skill-pill">PHP &amp; Laravel</span>
-                                <span class="skill-pill">Java</span>
-                                <span class="skill-pill">Swagger / OpenAPI</span>
-                                <span class="skill-pill">Authentication &amp; JWT</span>
-                            </div>
-                        </div>
-
-                        <!-- Database -->
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <div class="skills-icon"><i class="uil uil-database"></i></div>
-                                <div>
-                                    <h3>Databases &amp; Queries</h3>
-                                    <span class="skills-sub">NoSQL &amp; Relational</span>
-                                </div>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-pill">MongoDB (Mongoose)</span>
-                                <span class="skill-pill">MySQL</span>
-                                <span class="skill-pill">Query Optimization</span>
-                                <span class="skill-pill">Data Modeling</span>
-                            </div>
-                        </div>
-
-                        <!-- DevOps & Cloud -->
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <div class="skills-icon"><i class="uil uil-cloud-upload"></i></div>
-                                <div>
-                                    <h3>Cloud, Hosting &amp; Tools</h3>
-                                    <span class="skills-sub">Production Deployments</span>
-                                </div>
-                            </div>
-                            <div class="skills-list">
-                                <span class="skill-pill">AWS EC2</span>
-                                <span class="skill-pill">CloudFront</span>
-                                <span class="skill-pill">Cloudflare</span>
-                                <span class="skill-pill">Linux VPS</span>
-                                <span class="skill-pill">SSL &amp; DNS</span>
-                                <span class="skill-pill">SSH</span>
-                                <span class="skill-pill">Git &amp; GitHub</span>
-                                <span class="skill-pill">Postman</span>
-                                <span class="skill-pill">Figma &amp; Photoshop</span>
-                                <span class="skill-pill">Lighthouse</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- -------------- EXPERIENCE & TIMELINE ---------------- -->
-            <section class="journey section" id="experience">
-                <div class="top-header">
-                    <div class="section-badge-kicker">
-                        <span class="kicker-pulse"></span>
-                        <span class="kicker-text">Work History · 2023 — Present</span>
-                    </div>
-                    <h2>3 years of shipping code<br><span class="gradient-text">for real businesses.</span></h2>
-                    <p class="journey-subtitle">How I grew from an intern into a full-stack developer handling client projects from kickoff to production.</p>
-                </div>
-
-                <div class="timeline-container">
-                    <div class="timeline-line"><div class="timeline-line-progress" id="timelineProgress"></div></div>
-
-                    <!-- Current Position Card -->
-                    <div class="journey-main-card">
-                        <div class="journey-card-glow"></div>
-                        <div class="journey-header">
-                            <div class="journey-badge-row">
-                                <span class="journey-time-badge">2023 — PRESENT</span>
-                                <span class="journey-status-tag">Full-Time</span>
-                            </div>
-                            <h3 class="journey-role">Full Stack Developer (MERN Stack)</h3>
-                            <div class="journey-company">
-                                <span class="company-name">SmartXoft</span>
-                                <span class="company-sep">•</span>
-                                <span class="company-loc"><i class="uil uil-map-pin-alt"></i> Coimbatore, Tamil Nadu, India</span>
-                            </div>
-                            <p class="journey-narrative">
-                                Joined SmartXoft as a Full Stack Intern and was promoted to Full Stack Developer within <strong>eight months</strong> after taking ownership of client builds and shipping on time. Today, I work across client delivery, feature development, API integrations, and cloud hosting support.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Highlight Accomplishments Grid -->
-                    <div class="experience-highlights">
-                        <article class="highlight-card">
-                            <span class="highlight-number">01</span>
-                            <div class="highlight-content">
-                                <h4>20+ Client Projects Delivered</h4>
-                                <p>Built and launched websites and web applications across healthcare, industrial, electronics, and retail.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">02</span>
-                            <div class="highlight-content">
-                                <h4>Full-Stack Feature Development</h4>
-                                <p>Built interfaces for 18+ applications and full-stack features using React, Node.js, Express, MongoDB, MySQL, and Laravel.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">03</span>
-                            <div class="highlight-content">
-                                <h4>70% Faster Loading</h4>
-                                <p>Reworked batch processing for file-reading operations, eliminating frontend bottlenecks and cutting render lag.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">04</span>
-                            <div class="highlight-content">
-                                <h4>85+ Lighthouse Performance</h4>
-                                <p>Developed user-generated content functionality that reached an 85+ score on Google Lighthouse.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">05</span>
-                            <div class="highlight-content">
-                                <h4>Memrise Feature Collaboration</h4>
-                                <p>Contributed to the Memrise team on the development and rollout of an interactive data-driven feature.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">06</span>
-                            <div class="highlight-content">
-                                <h4>REST APIs &amp; GSAP Interactions</h4>
-                                <p>Designed documented RESTful endpoints with Swagger/OpenAPI and added tasteful GSAP micro-animations.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">07</span>
-                            <div class="highlight-content">
-                                <h4>AWS &amp; VPS Cloud Hosting</h4>
-                                <p>Deployed and maintained production applications on AWS EC2 and Linux VPS, with CloudFront, Cloudflare, SSL, and DNS.</p>
-                            </div>
-                        </article>
-
-                        <article class="highlight-card">
-                            <span class="highlight-number">08</span>
-                            <div class="highlight-content">
-                                <h4>Team Code Reviews &amp; Git</h4>
-                                <p>Collaborated through code reviews, maintained clean Git branching conventions, and helped teammates troubleshoot issues.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- -------------- EDUCATION & FOUNDATIONS ---------------- -->
-            <section class="credentials-section" id="education">
-                <div class="credentials-heading">
-                    <div class="section-badge-kicker">
-                        <span class="kicker-pulse"></span>
-                        <span class="kicker-text">Background</span>
-                    </div>
-                    <h2>Education &amp; Credentials</h2>
-                    <p class="credentials-sub">Psychology degree, technical courses, and professional certifications.</p>
-                </div>
-
-                <div class="credential-grid">
-                    <article class="credential">
-                        <div class="credential-period">2023 — 2024</div>
-                        <div class="credential-icon"><i class="uil uil-brackets-curly"></i></div>
-                        <h3>Web Design &amp; Web Development</h3>
-                        <p class="credential-institution">Web D School</p>
-                        <p class="credential-desc">Comprehensive training in modern frontend and backend development, responsive design, and web architecture.</p>
-                    </article>
-
-                    <article class="credential">
-                        <div class="credential-period">2017 — 2020</div>
-                        <div class="credential-icon"><i class="uil uil-brain"></i></div>
-                        <h3>Bachelor of Science · Psychology</h3>
-                        <p class="credential-institution">Sree Saraswathi Thyagaraja College</p>
-                        <p class="credential-desc">Studied human cognition, behavior, and decision-making — which directly guides how I build intuitive, user-friendly software.</p>
-                    </article>
-
-                    <article class="credential">
-                        <div class="credential-period">Certified</div>
-                        <div class="credential-icon"><i class="uil uil-check-circle"></i></div>
-                        <h3>Full Stack Development</h3>
-                        <p class="credential-institution">Certified Professional</p>
-                        <p class="credential-desc">Practical certification covering MERN stack architecture, RESTful API design, and cloud deployments.</p>
-                    </article>
-
-                    <article class="credential">
-                        <div class="credential-period">Certified</div>
-                        <div class="credential-icon"><i class="uil uil-vector-square"></i></div>
-                        <h3>Adobe Photoshop CC</h3>
-                        <p class="credential-institution">Certified Professional</p>
-                        <p class="credential-desc">Experience with image optimization, layout mockups, and preparing visual assets for web performance.</p>
-                    </article>
-
-                    <article class="credential languages-credential">
-                        <div class="credential-period">Languages</div>
-                        <div class="credential-icon"><i class="uil uil-comment-alt-lines"></i></div>
-                        <h3>English · Tamil · Kannada</h3>
-                        <p class="credential-institution">Comfortable working across teams</p>
-                        <p class="credential-desc">Clear communication with teammates, managers, and clients across different regions and backgrounds.</p>
-                    </article>
-                </div>
-            </section>
-
-
-            <!-- -------------- SELECTED FEATURED PROJECTS ---------------- -->
-            <section class="section projects-section" id="projects">
-                <div class="top-header projects-heading">
-                    <div class="section-badge-kicker">
-                        <span class="kicker-pulse"></span>
-                        <span class="kicker-text">Featured Work</span>
-                    </div>
-                    <h1>Projects I’ve worked on<br><span class="gradient-text">from concept to launch.</span></h1>
-                    <p class="projects-intro">
-                        A selection of web apps, SaaS tools, and client platforms I helped build and ship with the SmartXoft team and independent client work.
-                    </p>
-                </div>
-
-                <div class="featured-projects-grid">
-                    <!-- Project 1: Stylx -->
-                    <article class="featured-project-card">
-                        <div class="project-card-glow"></div>
-                        <div class="project-media-wrap">
-                            <div class="project-visual art-stylx">
-                                <div class="visual-overlay"></div>
-                                <span class="project-brand-monogram">S.</span>
-                                <div class="project-floating-tag">Multi-Vendor SaaS</div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta-badges">
-                                <span class="meta-badge">Salon Management</span>
-                                <span class="meta-badge">React</span>
-                                <span class="meta-badge">Node.js</span>
-                                <span class="meta-badge">MySQL</span>
-                            </div>
-                            <h3 class="project-title">Stylx · Multi-Vendor Salon Management SaaS</h3>
-                            <p class="project-desc">
-                                Contributed to building a salon management platform with vendor sign-in flows, appointment booking calendars, and tools for managing day-to-day salon operations.
-                            </p>
-                            <div class="project-tech-summary">
-                                <span><i class="uil uil-check"></i> Multi-vendor sign-in and role isolation</span>
-                                <span><i class="uil uil-check"></i> Real-time appointment scheduling</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2: QuickBasket -->
-                    <article class="featured-project-card">
-                        <div class="project-card-glow"></div>
-                        <div class="project-media-wrap">
-                            <div class="project-visual art-quickbasket">
-                                <div class="visual-overlay"></div>
-                                <span class="project-brand-monogram">QB</span>
-                                <div class="project-floating-tag">Delivery E-Commerce</div>
-                                <a class="project-external-btn magnetic-item" href="https://quickbasket.sitedemo.pro/" target="_blank" rel="noreferrer" aria-label="Visit QuickBasket live demonstration">
-                                    <i class="uil uil-arrow-up-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta-badges">
-                                <span class="meta-badge">Zone Delivery</span>
-                                <span class="meta-badge">React</span>
-                                <span class="meta-badge">Express</span>
-                                <span class="meta-badge">MySQL</span>
-                            </div>
-                            <h3 class="project-title">
-                                <a href="https://quickbasket.sitedemo.pro/" target="_blank" rel="noreferrer">
-                                    QuickBasket · Zone-Based Delivery Commerce
-                                </a>
-                            </h3>
-                            <p class="project-desc">
-                                Built desktop and mobile interfaces for zone-aware product browsing and ordering, with delivery workflows connected to Node.js REST APIs and MySQL.
-                            </p>
-                            <div class="project-tech-summary">
-                                <span><i class="uil uil-check"></i> Geofenced browsing &amp; delivery routing</span>
-                                <span><i class="uil uil-check"></i> Responsive mobile &amp; desktop UI</span>
-                            </div>
-                            <div class="project-card-footer">
-                                <a class="btn text-link-btn" href="https://quickbasket.sitedemo.pro/" target="_blank" rel="noreferrer">
-                                    <span>Visit Live Demo</span> <i class="uil uil-arrow-up-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3: Modern React E-Commerce -->
-                    <article class="featured-project-card">
-                        <div class="project-card-glow"></div>
-                        <div class="project-media-wrap">
-                            <div class="project-visual art-commerce">
-                                <img src="./img/ecommerce website.png" alt="React E-Commerce Application Interface" class="project-bg-img">
-                                <div class="visual-overlay"></div>
-                                <div class="project-floating-tag">Full-Stack MERN</div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta-badges">
-                                <span class="meta-badge">E-Commerce</span>
-                                <span class="meta-badge">React</span>
-                                <span class="meta-badge">Node.js</span>
-                                <span class="meta-badge">MongoDB</span>
-                            </div>
-                            <h3 class="project-title">Full-Stack React E-Commerce Application</h3>
-                            <p class="project-desc">
-                                Developed product discovery, instant search, cart, checkout, and payment gateway functionality with a responsive interface across mobile and desktop.
-                            </p>
-                            <div class="project-tech-summary">
-                                <span><i class="uil uil-check"></i> Instant product search &amp; filters</span>
-                                <span><i class="uil uil-check"></i> Responsive shopping cart &amp; checkout</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4: Enterprise Brand Storefronts -->
-                    <article class="featured-project-card">
-                        <div class="project-card-glow"></div>
-                        <div class="project-media-wrap">
-                            <div class="project-visual art-laravel">
-                                <div class="visual-overlay"></div>
-                                <span class="project-brand-monogram">PHP</span>
-                                <div class="project-floating-tag">Laravel &amp; Custom Web</div>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-meta-badges">
-                                <span class="meta-badge">PHP &amp; Laravel</span>
-                                <span class="meta-badge">E-Commerce</span>
-                                <span class="meta-badge">Responsive Web</span>
-                            </div>
-                            <h3 class="project-title">Commerce Storefronts for Growing Brands</h3>
-                            <p class="project-desc">
-                                Built and contributed to responsive commerce and corporate websites using PHP and Laravel, ensuring fast loading and clean presentation on phones and desktops.
-                            </p>
-                            <div class="client-links-grid">
-                                <a href="https://almahaliyah.com/" target="_blank" rel="noreferrer" class="client-brand-chip">Al Mahaliyah ↗</a>
-                                <a href="http://thamaya.in/" target="_blank" rel="noreferrer" class="client-brand-chip">Thamaya ↗</a>
-                                <a href="https://bharatmart.co.ao/frontend" target="_blank" rel="noreferrer" class="client-brand-chip">Bharatmart ↗</a>
-                                <a href="http://vimmies.in/" target="_blank" rel="noreferrer" class="client-brand-chip">Vimmies ↗</a>
-                                <a href="https://salzandhalz.com/" target="_blank" rel="noreferrer" class="client-brand-chip">Salz &amp; Halz ↗</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-
-                <!-- Client Work Directory (34 Real Sites) -->
-                <div class="client-work-section">
-                    <div class="client-work-heading">
-                        <div>
-                            <div class="section-badge-kicker">
-                                <span class="kicker-pulse"></span>
-                                <span class="kicker-text">Client Portfolio</span>
-                            </div>
-                            <h2>Shipped for 34 Businesses</h2>
-                            <p class="client-work-sub">Websites and digital experiences across healthcare, retail, industry, and corporate services.</p>
-                        </div>
-
-                        <!-- Live Search Bar -->
-                        <div class="client-search-wrap">
-                            <i class="uil uil-search search-icon"></i>
-                            <input type="text" id="clientSearchInput" class="client-search-input" placeholder="Search by name, industry, or domain..." aria-label="Search client projects">
-                            <span class="search-counter" id="clientCountBadge">34 Projects</span>
-                        </div>
-                    </div>
-
-                    <!-- Client Filter Buttons -->
-                    <div class="client-filters" id="clientFilters">
-                        <button class="filter-btn active" data-filter="all">All Projects (34)</button>
-                        <button class="filter-btn" data-filter="Client website">Websites</button>
-                        <button class="filter-btn" data-filter="Frontend">Frontend Focused</button>
-                        <button class="filter-btn" data-filter="Delivery app">Web Apps &amp; Delivery</button>
-                    </div>
-
-                    <!-- Interactive Client Table / Grid -->
-                    <div class="client-project-grid" id="client-project-grid" role="list">
-                        <!-- Populated dynamically via portfolio.js with hover preview cards -->
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- -------------- CONTACT SECTION ---------------- -->
-            <section class="section contact-section" id="contact">
-                <div class="top-header">
-                    <div class="section-badge-kicker">
-                        <span class="kicker-pulse"></span>
-                        <span class="kicker-text">Get In Touch</span>
-                    </div>
-                    <h1>Have a project in mind or<br><span class="gradient-text">looking for a developer?</span></h1>
-                    <p class="contact-subtitle">Whether you need a full-stack developer to help build a web app, have a freelance project, or just want to chat — feel free to drop a line.</p>
-                </div>
-
-                <div class="contact-grid">
-                    <!-- Left: Interactive Form -->
-                    <div class="contact-form-column">
-                        <div class="form-container">
-                            <div class="form-card-glow"></div>
-                            <form id="contactForm" onsubmit="return false;">
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="names_id">Your Name</label>
-                                        <div class="input-wrap">
-                                            <i class="uil uil-user"></i>
-                                            <input type="text" class="input-field" placeholder="e.g. Alex Morgan" id="names_id" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="emails_id">Your Email</label>
-                                        <div class="input-wrap">
-                                            <i class="uil uil-envelope-alt"></i>
-                                            <input type="email" class="input-field" placeholder="alex@company.com" id="emails_id" required>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="message">Your Message</label>
-                                    <div class="input-wrap textarea-wrap">
-                                        <i class="uil uil-comment-alt-edit"></i>
-                                        <textarea placeholder="Tell me a little about your project, timeline, or what you're looking for..." id="message" rows="5" required></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-action-row">
-                                    <button class="btn primary-btn magnetic-btn" id="btn" type="submit">
-                                        <span>Send Message</span>
-                                        <i class="uil uil-message"></i>
-                                    </button>
-                                    <p class="contact-status" id="contact-status" aria-live="polite">
-                                        <i class="uil uil-info-circle"></i> Opens directly in your email app with your filled message.
-                                    </p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Right: Direct Information & Copy Channels -->
-                    <div class="contact-info-column">
-                        <div class="contact-info-card">
-                            <div class="info-card-glow"></div>
-                            <div class="contact-card-header">
-                                <span class="status-indicator live-pulse"></span>
-                                <span class="contact-live-text">Quick Response (Usually within a few hours)</span>
-                            </div>
-
-                            <h3>Direct Contact</h3>
-                            <p class="contact-card-desc">Prefer email or phone directly? Feel free to reach out anytime through either of these.</p>
-
-                            <div class="contact-coordinate-list">
-                                <!-- Email with Copy Button -->
-                                <div class="coordinate-item">
-                                    <div class="coordinate-icon"><i class="uil uil-envelope-alt"></i></div>
-                                    <div class="coordinate-text">
-                                        <span class="coordinate-label">Email Address</span>
-                                        <a href="mailto:prasathfullstackdeveloper@gmail.com" class="coordinate-link" id="emailCoordLink">prasathfullstackdeveloper@gmail.com</a>
-                                    </div>
-                                    <button class="copy-btn magnetic-item" id="copyEmailBtn" type="button" aria-label="Copy email address" title="Copy email">
-                                        <i class="uil uil-copy"></i>
-                                    </button>
-                                </div>
-
-                                <!-- Phone -->
-                                <div class="coordinate-item">
-                                    <div class="coordinate-icon"><i class="uil uil-phone"></i></div>
-                                    <div class="coordinate-text">
-                                        <span class="coordinate-label">Phone &amp; WhatsApp</span>
-                                        <a href="tel:+918056564031" class="coordinate-link">+91 80565 64031</a>
-                                    </div>
-                                    <button class="copy-btn magnetic-item" id="copyPhoneBtn" type="button" aria-label="Copy phone number" title="Copy phone">
-                                        <i class="uil uil-copy"></i>
-                                    </button>
-                                </div>
-
-                                <!-- Location -->
-                                <div class="coordinate-item">
-                                    <div class="coordinate-icon"><i class="uil uil-map-pin-alt"></i></div>
-                                    <div class="coordinate-text">
-                                        <span class="coordinate-label">Location</span>
-                                        <span class="coordinate-val">Pollachi · Coimbatore, Tamil Nadu, India</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="contact-social-row">
-                                <span class="social-label">Connect online:</span>
-                                <div class="social_icons">
-                                    <a class="icon magnetic-item" href="https://github.com/prasath0405" target="_blank" rel="noreferrer" aria-label="GitHub">
-                                        <i class="uil uil-github-alt"></i>
-                                    </a>
-                                    <a class="icon magnetic-item" href="mailto:prasathfullstackdeveloper@gmail.com" aria-label="Email">
-                                        <i class="uil uil-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-
-        <!-- --------------- FOOTER --------------- -->
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div class="footer-top">
-                    <div class="footer-brand">
-                        <span class="footer-logo">B. K. Hariprasath<span class="accent-dot">.</span></span>
-                        <p class="footer-tagline">Full-Stack Developer based in Tamil Nadu. Building responsive web applications with React, Node.js, and GSAP.</p>
-                    </div>
-
-                    <div class="footer-nav">
-                        <ul class="footer-menu">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#stats">Stats</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#experience">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-back-to-top">
-                        <a href="#home" class="back-top-btn magnetic-item" aria-label="Scroll back to top">
-                            <i class="uil uil-arrow-up"></i>
-                            <span>Back to Top</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p class="footer-copy">
-                        &copy; 2026 <strong>B. K. Hariprasath</strong> · Pollachi, Tamil Nadu, India.
-                    </p>
-                    <div class="footer-socials">
-                        <a href="https://github.com/prasath0405" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="uil uil-github-alt"></i></a>
-                        <a href="mailto:prasathfullstackdeveloper@gmail.com" aria-label="Email"><i class="uil uil-envelope"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+      <div class="footer-grid">
+        <!-- Phone Col -->
+        <div>
+          <p class="footer-col-title">Phone &amp; WhatsApp</p>
+          <a href="tel:+918056564031" class="footer-link">+91 80565 64031</a>
+          <a href="https://wa.me/918056564031" target="_blank" rel="noreferrer" class="footer-link" style="color: var(--accent-sun);">Chat on WhatsApp ↗</a>
+        </div>
+
+        <!-- Email Col -->
+        <div>
+          <p class="footer-col-title">Direct Email</p>
+          <a href="mailto:prasathfullstackdeveloper@gmail.com" class="footer-link" style="word-break: break-all;">prasathfullstackdeveloper@gmail.com</a>
+        </div>
+
+        <!-- Follow Col -->
+        <div>
+          <p class="footer-col-title">Connect</p>
+          <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem; flex-wrap: wrap;">
+            <a href="https://github.com/prasath0405" target="_blank" rel="noreferrer" class="footer-link">GitHub ↗</a>
+            <a href="mailto:prasathfullstackdeveloper@gmail.com" class="footer-link">Email ↗</a>
+            <a href="./Resume/B_K_Hariprasath_Full_Stack_Developer.pdf" download="B_K_Hariprasath_Full_Stack_Developer.pdf" class="footer-link">Resume PDF ↗</a>
+          </div>
+        </div>
+
+        <!-- Colophon -->
+        <div>
+          <p class="footer-col-title">Location</p>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">
+            Pollachi · Coimbatore, Tamil Nadu, India.<br />
+            Built with modern full-stack craft &amp; empathy for the end user.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="footer-copy">© 2026 B. K. Hariprasath. All rights reserved.</p>
+        <a href="#top" class="footer-back-to-top" aria-label="Back to top of page">
+          <span>Back to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
     </div>
+  </footer>
 
-    <!-- Toast Notification for Copy -->
-    <div class="copy-toast" id="copyToast" aria-live="polite">Copied to clipboard!</div>
-
-    <!-- GSAP & ScrollTrigger from Cloudflare CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <!-- Custom Motion & Interaction Script -->
-    <script src="./portfolio.js" defer></script>
+  <!-- Main JavaScript -->
+  <script src="./script.js"></script>
 </body>
 </html>
